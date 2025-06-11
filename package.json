@@ -1,0 +1,12 @@
+{
+  "name": "phonktopia",
+  "version": "1.0.0",
+  "description": "Phonk web experience",
+  "scripts": {
+    "start": "serve src",
+    "build": "echo 'No build step required'"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+} 

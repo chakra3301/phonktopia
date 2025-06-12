@@ -24,7 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # Large media files to exclude
-*.mp3
 *.avi
 *.mkv
 

@@ -1,17 +1,16 @@
 {
-  "name": "phonkweb",
+  "name": "phonktopia",
   "version": "1.0.0",
-  "description": "Phonk Web Player",
-  "main": "index.js",
+  "description": "Phonk web experience",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "webamp": "^1.4.6"
+    "serve": "^14.2.1"
   },
   "devDependencies": {
     "vite": "^5.0.0"
   }
-} 
+}

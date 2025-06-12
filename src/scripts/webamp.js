@@ -1,5 +1,5 @@
 // Initialize Webamp
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     if (typeof Webamp === 'undefined') {
       console.error('Webamp failed to load');
       return;
@@ -8,25 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const webamp = new Webamp({
       initialTracks: [
         {
-          metaData: {
-            artist: "Phonk",
-            title: "Funk Do Inferno",
-          },
+          metaData: { artist: "Phonk", title: "Funk Do Inferno" },
           url: "assets/funk-do-inferno-slowed.mp3",
         },
+        // ... (all your other tracsk
         {
-          metaData: {
-            artist: "Phonk",
-            title: "MTG Zona Fatal",
-          },
-          url: "assets/mtg-zona-fatal.mp3",
+          metaData: { artist: "Phonk", title: "Pita O Funk" },
+          url: "assets/pita-o-funk-super-slowed.mp3",
         },
         {
           metaData: {
             artist: "Phonk",
-            title: "HIIT 3 2KE",
+            title: "Midnight Drift",
           },
-          url: "assets/hiit-3-2ke-clean-version.mp3",
+          url: "assets/midnight-drift.mp3",
         },
         {
           metaData: {
@@ -38,58 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           metaData: {
             artist: "Phonk",
-            title: "X Mortal",
+            title: "Beat Ansiosa",
           },
-          url: "assets/x-mortal-super-slowed.mp3",
-        },
-        {
-          metaData: {
-            artist: "Phonk",
-            title: "Qaraqshy Z Omega",
-          },
-          url: "assets/qaraqshy-z-omega-slowed.mp3",
-        },
-        {
-          metaData: {
-            artist: "Phonk",
-            title: "Egoística",
-          },
-          url: "assets/egoÍstica-slowed-to-perfection.mp3",
-        },
-        {
-          metaData: {
-            artist: "Phonk",
-            title: "Montagem Forçe Bater",
-          },
-          url: "assets/montagem-forÇe-bater.mp3",
-        },
-        {
-          metaData: {
-            artist: "Phonk",
-            title: "Dimensão da Antimatéria",
-          },
-          url: "assets/dimensão-da-antimatéria-slowed-eiby.mp3",
-        },
-        {
-          metaData: {
-            artist: "Phonk",
-            title: "Montagem Mare Grana",
-          },
-          url: "assets/montagem-mare-grana-hardstyle-remix.mp3",
-        },
-        {
-          metaData: {
-            artist: "Phonk",
-            title: "Montagem Explosao Extrema",
-          },
-          url: "assets/montagem-explosao-extrema.mp3",
-        },
-        {
-          metaData: {
-            artist: "Phonk",
-            title: "Nitox",
-          },
-          url: "assets/nitox.mp3",
+          url: "assets/beat-ansiosa-hardstyle-remix-slowed.mp3",
         },
         {
           metaData: {
@@ -101,23 +47,23 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           metaData: {
             artist: "Phonk",
-            title: "Beat Ansiosa",
+            title: "Dimensão da Antimatéria",
           },
-          url: "assets/beat-ansiosa-hardstyle-remix-slowed.mp3",
+          url: "assets/dimensão-da-antimatéria-slowed-eiby.mp3",
         },
         {
           metaData: {
             artist: "Phonk",
-            title: "Mxng0 Slide",
+            title: "Egoística",
           },
-          url: "assets/mxng0-slide-de-ritmo.mp3",
+          url: "assets/egoÍstica-slowed-to-perfection.mp3",
         },
         {
           metaData: {
             artist: "Phonk",
-            title: "X Menor Speed Up",
+            title: "Funk Do Inferno",
           },
-          url: "assets/x-menor-speed-up-soulfusi-wxrtnax.mp3",
+          url: "assets/funk-do-inferno-slowed.mp3",
         },
         {
           metaData: {
@@ -129,9 +75,30 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           metaData: {
             artist: "Phonk",
-            title: "Z Alpha2",
+            title: "HIIT 3 2KE",
           },
-          url: "assets/z-alpha2.mp3",
+          url: "assets/hiit-3-2ke-clean-version.mp3",
+        },
+        {
+          metaData: {
+            artist: "Phonk",
+            title: "Montagem Explosao Extrema",
+          },
+          url: "assets/montagem-explosao-extrema.mp3",
+        },
+        {
+          metaData: {
+            artist: "Phonk",
+            title: "Montagem Forçe Bater",
+          },
+          url: "assets/montagem-forÇe-bater.mp3",
+        },
+        {
+          metaData: {
+            artist: "Phonk",
+            title: "Montagem Mare Grana",
+          },
+          url: "assets/montagem-mare-grana-hardstyle-remix.mp3",
         },
         {
           metaData: {
@@ -143,16 +110,23 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           metaData: {
             artist: "Phonk",
-            title: "X Menor",
+            title: "MTG Zona Fatal",
           },
-          url: "assets/x-menor.mp3",
+          url: "assets/mtg-zona-fatal.mp3",
         },
         {
           metaData: {
             artist: "Phonk",
-            title: "Z Ispugalsa",
+            title: "Mxng0 Slide",
           },
-          url: "assets/z-ispugalsa-ultra-slowed.mp3",
+          url: "assets/mxng0-slide-de-ritmo.mp3",
+        },
+        {
+          metaData: {
+            artist: "Phonk",
+            title: "Nitox",
+          },
+          url: "assets/nitox.mp3",
         },
         {
           metaData: {
@@ -160,6 +134,48 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Pita O Funk",
           },
           url: "assets/pita-o-funk-super-slowed.mp3",
+        },
+        {
+          metaData: {
+            artist: "Phonk",
+            title: "Qaraqshy Z Omega",
+          },
+          url: "assets/qaraqshy-z-omega-slowed.mp3",
+        },
+        {
+          metaData: {
+            artist: "Phonk",
+            title: "X Menor",
+          },
+          url: "assets/x-menor.mp3",
+        },
+        {
+          metaData: {
+            artist: "Phonk",
+            title: "X Menor Speed Up",
+          },
+          url: "assets/x-menor-speed-up-soulfusi-wxrtnax.mp3",
+        },
+        {
+          metaData: {
+            artist: "Phonk",
+            title: "X Mortal",
+          },
+          url: "assets/x-mortal-super-slowed.mp3",
+        },
+        {
+          metaData: {
+            artist: "Phonk",
+            title: "Z Alpha2",
+          },
+          url: "assets/z-alpha2.mp3",
+        },
+        {
+          metaData: {
+            artist: "Phonk",
+            title: "Z Ispugalsa",
+          },
+          url: "assets/z-ispugalsa-ultra-slowed.mp3",
         }
       ],
       zIndex: 9999,
@@ -173,31 +189,29 @@ document.addEventListener('DOMContentLoaded', function() {
       enablePersistence: true
     });
   
-    // Don't forget to render Webamp
-    const container = document.getElementById('webamp-container');
-    if (!container) {
-      console.error('Webamp container not found');
-      return;
-    }
+    // Play button trigger (make sure this is AFTER webamp is defined)
+    const playBtn = document.getElementById("playBtn");
+    if (playBtn) {
+      playBtn.addEventListener("click", () => {
+        webamp.renderWhenReady(document.getElementById("webamp-container"));
+      });
+    } else {
+      // If no play button, render immediately
+      const container = document.getElementById('webamp-container');
+      if (!container) {
+        console.error('Webamp container not found');
+        return;
+      }
   
-    webamp.renderWhenReady(container).then(() => {
-      console.log('Webamp rendered successfully');
-      // Ensure the track is loaded and ready to play
-      webamp.setVolume(0.8);
-      // Add error handling for track loading
-      webamp.onTrackDidChange((track) => {
-        console.log('Track changed:', track);
+      webamp.renderWhenReady(container).then(() => {
+        console.log('Webamp rendered successfully');
+        webamp.setVolume(0.8);
+        webamp.onTrackDidChange((track) => console.log('Track changed:', track));
+        webamp.onTrackDidStart((track) => console.log('Track started:', track));
+        webamp.onTrackDidEnd((track) => console.log('Track ended:', track));
+        webamp.onError((error) => console.error('Webamp error:', error));
+      }).catch(error => {
+        console.error('Failed to render Webamp:', error);
       });
-      webamp.onTrackDidStart((track) => {
-        console.log('Track started:', track);
-      });
-      webamp.onTrackDidEnd((track) => {
-        console.log('Track ended:', track);
-      });
-      webamp.onError((error) => {
-        console.error('Webamp error:', error);
-      });
-    }).catch(error => {
-      console.error('Failed to render Webamp:', error);
-    });
+    }
   });

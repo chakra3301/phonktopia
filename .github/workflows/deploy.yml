@@ -14,10 +14,17 @@ jobs:
           lfs: true
           fetch-depth: 0
       
+      - name: Copy files to root
+        run: |
+          cp -r src/* .
+          cp -r src/assets .
+          cp -r src/scripts .
+          cp -r src/styles .
+      
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./src
+          publish_dir: ./
           publish_branch: main
           force_orphan: true 

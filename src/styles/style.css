@@ -99,14 +99,15 @@ body {
 
 @media (max-width: 480px) {
   .phonk-character {
+    margin-top: 100px;
     width: 50vw;
     max-width: 150px;
   }
   .phonk-character.left {
-    margin-left: 15vw;
+    margin-left: 5vw;
   }
   .phonk-character.right {
-    margin-right: 15vw;
+    margin-right: 5vw;
   }
 }
 
@@ -140,8 +141,8 @@ body {
 
 @media (max-width: 480px) {
   .cars-image {
-    width: 60vw;
-    max-width: 300px;
+    width: 100vw;
+    max-width: 500px;
   }
   .cars-container {
     margin-top: 20px;
@@ -271,7 +272,7 @@ body {
 
 @media (max-width: 480px) {
   .social-buttons-container {
-    margin-top: -250px;
+    margin-top: -100px;
   }
   .social-icon {
     width: 100px;

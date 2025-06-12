@@ -184,9 +184,17 @@ document.addEventListener('DOMContentLoaded', function () {
         playlist: { position: { x: 0, y: 116 } },
         equalizer: { position: { x: 0, y: 232 } }
       },
-      availableSkins: [],
+      availableSkins: [
+        {
+          url: "assets/skins/skin.wsz",
+          name: "Phonk Skin"
+        }
+      ],
       enableHotkeys: true,
-      enablePersistence: true
+      enablePersistence: true,
+      initialSkin: {
+        url: "assets/skins/skin.wsz"
+      }
     });
   
     // Play button trigger (make sure this is AFTER webamp is defined)

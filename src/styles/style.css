@@ -4,19 +4,44 @@ body {
     min-height: 100vh;
     background: url('../assets/BG.gif') no-repeat center center fixed;
     background-size: cover;
+    background-color: #000; /* Fallback color */
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
   
-    /* Optional: fallback color */
-    background-color: #000;
-  
     /* Optional: disable image dragging */
     -webkit-user-drag: none;
     user-select: none;
-  }
+}
+
+/* Responsive background adjustments */
+@media (max-width: 1200px) {
+    body {
+        background-size: 120% auto;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        background-size: 150% auto;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: 200% auto;
+        background-position: center center;
+    }
+}
+
+/* For devices with high pixel density */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    body {
+        background-size: 100% auto;
+    }
+}
 
 .logo-container {
   text-align: center;

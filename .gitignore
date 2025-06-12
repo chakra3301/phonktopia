@@ -27,4 +27,18 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
-*.sw? 
+*.sw?
+
+# Large media files
+*.mov
+*.mp4
+*.avi
+*.mkv
+
+# System files
+.DS_Store
+**/.DS_Store
+
+# Temporary files
+*.tmp
+*.temp 

@@ -1,3 +1,23 @@
+// Initialize Webamp
+const webamp = new Webamp({
+  initialTracks: [
+    {
+      metaData: {
+        artist: "Phonk",
+        title: "Midnight Drift",
+      },
+      url: "assets/midnight-drift.mp3",
+    },
+  ],
+  zIndex: 9999,
+  initialSkin: {
+    url: "assets/skins/phonk.wsz"
+  }
+});
+
+// Don't forget to render Webamp
+webamp.renderWhenReady(document.getElementById('webamp-container'));
+
 // Define your video sources here (relative paths to video files)
 const videoSources = [
   'assets/vid2.mov',

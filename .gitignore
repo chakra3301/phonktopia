@@ -3,20 +3,42 @@ node_modules/
 .pnp
 .pnp.js
 
-# Production build
-dist/
+# Testing
+coverage/
+
+# Production
 build/
+dist/
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Large media files
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.mp3
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
 
 # Development
 .vite/
 *.local
-
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Editor directories and files
 .vscode/*
@@ -28,16 +50,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
-
-# Large media files
-*.mov
-*.mp4
-*.avi
-*.mkv
-
-# System files
-.DS_Store
-**/.DS_Store
 
 # Temporary files
 *.tmp

@@ -11,7 +11,7 @@ const webamp = new Webamp({
   ],
   zIndex: 9999,
   initialSkin: {
-    url: "assets/phonk.wsz"
+    url: "https://raw.githubusercontent.com/chakra3301/phonktopia/main/src/assets/phonk.wsz"
   }
 });
 

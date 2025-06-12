@@ -11,7 +11,7 @@ const webamp = new Webamp({
   ],
   zIndex: 9999,
   initialSkin: {
-    url: "assets/skins/phonk.wsz"
+    url: "assets/phonk.wsz"
   }
 });
 

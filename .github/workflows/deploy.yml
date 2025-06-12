@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          lfs: true
+          lfs: false  # Disable LFS during checkout
           
       - name: Setup Pages
         uses: actions/configure-pages@v4

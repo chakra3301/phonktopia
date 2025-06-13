@@ -3,7 +3,7 @@ body {
     padding: 0;
     min-height: 100vh;
     background: url('../assets/BG.gif') no-repeat center center fixed;
-    background-size: cover;
+    background-size: fill;
     background-color: #000; /* Fallback color */
     display: flex;
     flex-direction: column;
@@ -37,12 +37,7 @@ body {
     }
 }
 
-/* For devices with high pixel density */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    body {
-        background-size: 100% auto;
-    }
-}
+
 
 .logo-container {
   text-align: center;

@@ -1,16 +1,18 @@
-// Define your video sources here (absolute paths for GitHub Pages)
+
+
+// Define your video sources here (relative paths to video files)
 const videoSources = [
-  '/phonktopia/assets/vid2.mov',
-  '/phonktopia/assets/vid3.mov',
-  '/phonktopia/assets/vid4.mov',
-  '/phonktopia/assets/vid5.mp4',
-  '/phonktopia/assets/vid6.mov',
-  '/phonktopia/assets/vid7.mp4',
-  '/phonktopia/assets/vid8.mp4',
-  '/phonktopia/assets/vid9.mov',
-  '/phonktopia/assets/vid10.mov',
-  '/phonktopia/assets/vid11.mov',
-  '/phonktopia/assets/vid12.mov'
+  'assets/vid2.mov',
+  'assets/vid3.mov',
+  'assets/vid4.mov',
+  'assets/vid5.mp4',
+  'assets/vid6.mov',
+  'assets/vid7.mp4',
+  'assets/vid8.mp4',
+  'assets/vid9.mov',
+  'assets/vid10.mov',
+  'assets/vid11.mov',
+  'assets/vid12.mov'
 ];
 
 // Reference the video feed container
@@ -23,7 +25,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     const video = entry.target.querySelector('video');
     if (entry.isIntersecting) {
-      video.play().catch(error => console.log('Autoplay prevented:', error));
+      video.play();
     } else {
       video.pause();
     }
@@ -52,8 +54,8 @@ videoSources.forEach((src, index) => {
   // Use backticks for the template literal!
   wrapper.innerHTML = `
     <div class="video-frame-custom">
-      <video id="phonkVideo_${index}" src="${src}" muted loop playsinline></video>
-      <img src="/phonktopia/assets/videoframe.png" alt="Video Frame" class="video-frame-png">
+      <video id="phonkVideo_${index}" src="${src}" muted loop></video>
+      <img src="assets/videoframe.png" alt="Video Frame" class="video-frame-png">
     </div>
   `;
 
@@ -72,7 +74,7 @@ videoSources.forEach((src, index) => {
       popupContent.appendChild(video);
       popupContent.appendChild(frame);
       popupOverlay.classList.add('active');
-      video.play().catch(error => console.log('Popup video play prevented:', error));
+      video.play();
     }
   });
 });

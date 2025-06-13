@@ -1,14 +1,16 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# Media files tracked by Git LFS
-*.mov filter=lfs diff=lfs merge=lfs -text
-*.mp4 filter=lfs diff=lfs merge=lfs -text
-*.mp3 filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
-*.jpg filter=lfs diff=lfs merge=lfs -text
-*.jpeg filter=lfs diff=lfs merge=lfs -text
-*.gif filter=lfs diff=lfs merge=lfs -text
+# Media files
+*.mov binary
+*.mp4 binary
+*.avi binary
+*.mkv binary
+*.gif binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp3 binary
 
 # Documents
 *.md text

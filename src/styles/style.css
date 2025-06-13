@@ -1,29 +1,20 @@
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background: url('../assets/BG.gif') no-repeat center center fixed;
-    background-size: fill;
-    background-color: #000; /* Fallback color */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-  
-    /* Optional: disable image dragging */
-    -webkit-user-drag: none;
-    user-select: none;
-    cursor: url('../assets/cursor.png'), auto;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('../assets/BG.gif') no-repeat center center fixed;
+  background-size: cover; /* ✅ this makes it fill the screen */
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-user-drag: none;
+  user-select: none;
+  cursor: url('../assets/cursor.png'), auto;
 }
 
-@media (max-width: 480px) {
-    body {
-        background-size: cover;
-        background-position: center;
-        overflow-x: hidden;
-    }
-}
 
 .logo-container {
   text-align: center;

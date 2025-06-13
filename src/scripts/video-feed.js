@@ -58,9 +58,18 @@ function createVideoElement(video) {
             <h3>${video.title}</h3>
             <p>${video.description}</p>
         </div>
+        <button class="play-button">Play</button>
     `;
     if (!isMobile()) {
         videoElement.addEventListener('click', () => showVideoPopup(video));
+    } else {
+        const playButton = videoElement.querySelector('.play-button');
+        playButton.addEventListener('click', () => {
+            const video = videoElement.querySelector('video');
+            if (video) {
+                video.play();
+            }
+        });
     }
     return videoElement;
 }

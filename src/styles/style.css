@@ -17,25 +17,6 @@ body {
     cursor: url('../assets/cursor.png'), auto;
 }
 
-/* Responsive background adjustments */
-
-@media (max-width: 480px) {
-    body {
-        overflow-x: hidden;
-    }
-    .video-wrapper-dynamic {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-    .video-frame-custom {
-        width: 100%;
-        height: auto;
-    }
-    .video-frame-custom video {
-        width: 100%;
-        height: auto;
-    }
-}
 
 
 

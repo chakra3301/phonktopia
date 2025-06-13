@@ -18,17 +18,6 @@ body {
 }
 
 /* Responsive background adjustments */
-@media (max-width: 1200px) {
-    body {
-        background-size: 120% auto;
-    }
-}
-
-@media (max-width: 900px) {
-    body {
-        background-size: 150% auto;
-    }
-}
 
 @media (max-width: 480px) {
     body {

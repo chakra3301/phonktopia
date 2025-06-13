@@ -33,7 +33,7 @@ body {
 @media (max-width: 480px) {
     body {
         background-attachment: fixed;
-        background-size: cover;
+        background-size: fill;
         overflow-x: hidden;
     }
     .video-wrapper-dynamic {

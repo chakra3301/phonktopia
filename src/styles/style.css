@@ -17,8 +17,13 @@ body {
     cursor: url('../assets/cursor.png'), auto;
 }
 
-
-
+@media (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-position: center;
+        overflow-x: hidden;
+    }
+}
 
 .logo-container {
   text-align: center;

@@ -23,7 +23,7 @@ const popupContent = document.querySelector('.video-popup-content');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     const video = entry.target.querySelector('video');
-    if (entry.isIntersecting && !isMobile()) {
+    if (entry.isIntersecting) {
       video.play();
     } else {
       video.pause();
@@ -82,7 +82,7 @@ videoSources.forEach((src, index) => {
   // Use backticks for the template literal!
   wrapper.innerHTML = `
     <div class="video-frame-custom">
-      <video id="phonkVideo_${index}" src="${src}" muted loop></video>
+      <video id="phonkVideo_${index}" src="${src}" muted loop playsinline></video>
       <img src="assets/videoframe.png" alt="Video Frame" class="video-frame-png">
     </div>
   `;
@@ -96,13 +96,13 @@ videoSources.forEach((src, index) => {
   const videoFrame = wrapper.querySelector('.video-frame-custom');
   videoFrame.addEventListener('click', () => {
     if (window.innerWidth > 600 && !isMobile()) { // Only on desktop
-        const video = wrapper.querySelector('video').cloneNode(true);
-        const frame = wrapper.querySelector('.video-frame-png').cloneNode(true);
-        popupContent.innerHTML = '';
-        popupContent.appendChild(video);
-        popupContent.appendChild(frame);
-        popupOverlay.classList.add('active');
-        video.play();
+      const video = wrapper.querySelector('video').cloneNode(true);
+      const frame = wrapper.querySelector('.video-frame-png').cloneNode(true);
+      popupContent.innerHTML = '';
+      popupContent.appendChild(video);
+      popupContent.appendChild(frame);
+      popupOverlay.classList.add('active');
+      video.play();
     }
   });
 });

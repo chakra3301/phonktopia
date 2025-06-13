@@ -4,20 +4,6 @@
 # Media files
 *.mov binary
 *.mp4 binary
-*.avi binary
-*.mkv binary
-*.gif binary
-*.png binary
-*.jpg binary
-*.jpeg binary
 *.mp3 binary
 
-# Documents
-*.md text
-*.txt text
-*.html text
-*.css text
-*.js text
-*.json text
-*.yml text
-*.yaml text
+# Docum

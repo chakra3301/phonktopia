@@ -264,6 +264,9 @@ body {
   .video-popup-overlay {
     display: none !important;
   }
+  .video-feed-container {
+    pointer-events: none;
+  }
 }
 
 /* Social Buttons Container */

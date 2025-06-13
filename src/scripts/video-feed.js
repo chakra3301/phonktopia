@@ -95,14 +95,14 @@ videoSources.forEach((src, index) => {
   // Handle video click for popup (desktop only)
   const videoFrame = wrapper.querySelector('.video-frame-custom');
   videoFrame.addEventListener('click', () => {
-    if (window.innerWidth > 600) { // Only on desktop
-      const video = wrapper.querySelector('video').cloneNode(true);
-      const frame = wrapper.querySelector('.video-frame-png').cloneNode(true);
-      popupContent.innerHTML = '';
-      popupContent.appendChild(video);
-      popupContent.appendChild(frame);
-      popupOverlay.classList.add('active');
-      video.play();
+    if (window.innerWidth > 600 && !isMobile()) { // Only on desktop
+        const video = wrapper.querySelector('video').cloneNode(true);
+        const frame = wrapper.querySelector('.video-frame-png').cloneNode(true);
+        popupContent.innerHTML = '';
+        popupContent.appendChild(video);
+        popupContent.appendChild(frame);
+        popupOverlay.classList.add('active');
+        video.play();
     }
   });
 });

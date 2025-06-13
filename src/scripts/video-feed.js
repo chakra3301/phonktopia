@@ -2,13 +2,14 @@
 
 // Define your video sources here (relative paths to video files)
 const videoSources = [
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid1.mov',
   'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid2.mov',
   'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid3.mov',
   'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid4.mov',
-  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid5.mov',
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid5.mp4',
   'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid6.mov',
-  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid7.mov',
-  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid8.mov',
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid7.mp4',
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid8.mp4',
   'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid9.mov',
   'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid10.mov',
   'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid11.mov',
@@ -67,7 +68,7 @@ videoSources.forEach((src, index) => {
   // Handle video click for popup (desktop only)
   const videoFrame = wrapper.querySelector('.video-frame-custom');
   videoFrame.addEventListener('click', () => {
-    if (window.innerWidth > 480) { // Only on desktop
+    if (window.innerWidth > 600) { // Only on desktop
       const video = wrapper.querySelector('video').cloneNode(true);
       const frame = wrapper.querySelector('.video-frame-png').cloneNode(true);
       popupContent.innerHTML = '';

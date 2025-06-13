@@ -1,5 +1,3 @@
-
-
 // Define your video sources here (relative paths to video files)
 const videoSources = [
   'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid1.mov',
@@ -46,6 +44,26 @@ popupOverlay.addEventListener('click', (e) => {
     popupContent.innerHTML = '';
   }
 });
+
+function isMobile() {
+    return window.innerWidth <= 480;
+}
+
+function createVideoElement(video) {
+    const videoElement = document.createElement('div');
+    videoElement.className = 'video-item';
+    videoElement.innerHTML = `
+        <img src="${video.thumbnail}" alt="${video.title}" />
+        <div class="video-info">
+            <h3>${video.title}</h3>
+            <p>${video.description}</p>
+        </div>
+    `;
+    if (!isMobile()) {
+        videoElement.addEventListener('click', () => showVideoPopup(video));
+    }
+    return videoElement;
+}
 
 // Dynamically create and insert each video block
 videoSources.forEach((src, index) => {

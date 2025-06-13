@@ -32,9 +32,8 @@ body {
 
 @media (max-width: 480px) {
     body {
-        background-size: 200% auto;
-        background-position: center center;
-        background-repeat: repeat;
+        background-attachment: fixed;
+        background-size: cover;
     }
 }
 

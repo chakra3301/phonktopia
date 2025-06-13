@@ -23,7 +23,7 @@ const popupContent = document.querySelector('.video-popup-content');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     const video = entry.target.querySelector('video');
-    if (entry.isIntersecting) {
+    if (entry.isIntersecting && !isMobile()) {
       video.play();
     } else {
       video.pause();

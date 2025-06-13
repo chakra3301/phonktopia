@@ -345,3 +345,9 @@ body {
     transform-origin: bottom right; 
   }
 }
+
+@media (max-width: 480px) {
+    .phonk-logo, .phonk-character, .social-icon, .cars-image {
+        pointer-events: none;
+    }
+}

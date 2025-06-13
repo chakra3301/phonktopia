@@ -14,7 +14,7 @@ body {
     /* Optional: disable image dragging */
     -webkit-user-drag: none;
     user-select: none;
-    cursor: url('assets/cursor.png'), auto;
+    cursor: url('src/assets/cursor.png'), auto;
 }
 
 /* Responsive background adjustments */

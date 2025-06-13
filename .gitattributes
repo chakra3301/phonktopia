@@ -1,9 +1,0 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-
-# Media files
-*.mov binary
-*.mp4 binary
-*.mp3 binary
-
-# Docum

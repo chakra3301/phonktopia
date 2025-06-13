@@ -2,17 +2,17 @@
 
 // Define your video sources here (relative paths to video files)
 const videoSources = [
-  'assets/vid2.mov',
-  'assets/vid3.mov',
-  'assets/vid4.mov',
-  'assets/vid5.mp4',
-  'assets/vid6.mov',
-  'assets/vid7.mp4',
-  'assets/vid8.mp4',
-  'assets/vid9.mov',
-  'assets/vid10.mov',
-  'assets/vid11.mov',
-  'assets/vid12.mov'
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid2.mov',
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid3.mov',
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid4.mov',
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid5.mov',
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid6.mov',
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid7.mov',
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid8.mov',
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid9.mov',
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid10.mov',
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid11.mov',
+  'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid12.mov'
 ];
 
 // Reference the video feed container

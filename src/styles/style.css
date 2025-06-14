@@ -333,7 +333,7 @@ body {
 @media (min-width: 1200px) {
     .characters-container {
         justify-content: center;
-        gap: 100px;
+        gap: 200px;
     }
 }
 

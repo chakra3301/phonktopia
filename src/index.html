@@ -33,9 +33,15 @@
     body {
         background-image: url('assets/BG.gif');
         background-attachment: fixed;
-        background-size: 100% 100%;
+        background-size: cover;
         background-repeat: no-repeat;
         cursor: url('assets/troll.png'), 16 16;
+    }
+
+    @media (max-width: 480px) {
+        body {
+            background-size: 100% 100%;
+        }
     }
   </style>
 </head>

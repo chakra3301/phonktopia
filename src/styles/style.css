@@ -333,6 +333,11 @@ body {
 @media (min-width: 1200px) {
     .characters-container {
         justify-content: center;
-        gap: 20px;
+        gap: 100px;
     }
+}
+
+button:hover {
+    cursor: url('assets/troll.png'), 16 16;
+    box-shadow: 0 0 20px #ff00ff;
 }

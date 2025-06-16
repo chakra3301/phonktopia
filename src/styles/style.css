@@ -356,14 +356,6 @@ button:hover {
   max-width: 500px;
 }
 
-.carousel-arrow {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  z-index: 10;
-}
 
 .carousel-video-container video,
 .carousel-video-container img {

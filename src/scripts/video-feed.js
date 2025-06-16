@@ -30,9 +30,7 @@ const observer = new IntersectionObserver((entries) => {
       }
     }
   });
-}, {
-  threshold: 0.7
-});
+}, { threshold: 0.7 });
 
 popupOverlay.addEventListener('click', (e) => {
   if (e.target === popupOverlay) {
@@ -47,20 +45,16 @@ function isMobile() {
   return window.innerWidth <= 480;
 }
 
-// Create mobile carousel container
+// Create swipe-only mobile carousel container
 const mobileCarousel = document.createElement('div');
 mobileCarousel.id = 'mobile-video-carousel';
 mobileCarousel.style.display = 'none';
 mobileCarousel.innerHTML = `
-  <button id="prevVideo" class="carousel-arrow">◀</button>
-  <div class="carousel-video-container"></div>
-  <button id="nextVideo" class="carousel-arrow">▶</button>
+  <div class="carousel-video-container" id="carouselSwipeArea"></div>
 `;
 document.body.appendChild(mobileCarousel);
 
-const carouselContainer = mobileCarousel.querySelector('.carousel-video-container');
-const prevBtn = mobileCarousel.querySelector('#prevVideo');
-const nextBtn = mobileCarousel.querySelector('#nextVideo');
+const carouselContainer = document.getElementById('carouselSwipeArea');
 let currentVideoIndex = 0;
 
 function renderCarouselVideo(index) {
@@ -83,29 +77,41 @@ function renderCarouselVideo(index) {
   carouselContainer.appendChild(video);
   carouselContainer.appendChild(frame);
 
-  // Safe async play with error handling
+  // Safe async play
   const playPromise = video.play();
   if (playPromise !== undefined) {
-    playPromise
-      .then(() => {
-        // Autoplay started successfully
-      })
-      .catch((error) => {
-        console.warn('Autoplay error:', error.message);
-        // Optionally show a play button fallback for manual play
-      });
+    playPromise.catch((error) => {
+      console.warn('Autoplay error:', error.message);
+    });
   }
 }
 
-prevBtn.addEventListener('click', () => {
-  currentVideoIndex = (currentVideoIndex - 1 + videoSources.length) % videoSources.length;
-  renderCarouselVideo(currentVideoIndex);
+// Swipe logic
+let touchStartX = 0;
+let touchEndX = 0;
+
+carouselContainer.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
 });
 
-nextBtn.addEventListener('click', () => {
-  currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
-  renderCarouselVideo(currentVideoIndex);
+carouselContainer.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipeGesture();
 });
+
+function handleSwipeGesture() {
+  const swipeThreshold = 50;
+  const deltaX = touchEndX - touchStartX;
+
+  if (Math.abs(deltaX) > swipeThreshold) {
+    if (deltaX < 0) {
+      currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+    } else {
+      currentVideoIndex = (currentVideoIndex - 1 + videoSources.length) % videoSources.length;
+    }
+    renderCarouselVideo(currentVideoIndex);
+  }
+}
 
 function toggleVideoLayout() {
   if (isMobile()) {
@@ -121,7 +127,7 @@ function toggleVideoLayout() {
 window.addEventListener('DOMContentLoaded', toggleVideoLayout);
 window.addEventListener('resize', toggleVideoLayout);
 
-// Desktop feed generation
+// Desktop: render grid
 videoSources.forEach((src, index) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('video-wrapper-dynamic');

@@ -82,7 +82,19 @@ function renderCarouselVideo(index) {
   carouselContainer.innerHTML = '';
   carouselContainer.appendChild(video);
   carouselContainer.appendChild(frame);
-  video.play();
+
+  // Safe async play with error handling
+  const playPromise = video.play();
+  if (playPromise !== undefined) {
+    playPromise
+      .then(() => {
+        // Autoplay started successfully
+      })
+      .catch((error) => {
+        console.warn('Autoplay error:', error.message);
+        // Optionally show a play button fallback for manual play
+      });
+  }
 }
 
 prevBtn.addEventListener('click', () => {

@@ -1,3 +1,5 @@
+// Existing videoSources and HTML/JS setup remains unchanged
+
 const videoSources = [
   'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid1.mov',
   'https://pub-47d44b4e2e4c43d7922bf3cc7715f8b0.r2.dev/vid2.mov',
@@ -45,6 +47,69 @@ function isMobile() {
   return window.innerWidth <= 480;
 }
 
+// Create mobile carousel container
+const mobileCarousel = document.createElement('div');
+mobileCarousel.id = 'mobile-video-carousel';
+mobileCarousel.style.display = 'none';
+mobileCarousel.innerHTML = `
+  <button id="prevVideo" class="carousel-arrow">◀</button>
+  <div class="carousel-video-container"></div>
+  <button id="nextVideo" class="carousel-arrow">▶</button>
+`;
+document.body.appendChild(mobileCarousel);
+
+const carouselContainer = mobileCarousel.querySelector('.carousel-video-container');
+const prevBtn = mobileCarousel.querySelector('#prevVideo');
+const nextBtn = mobileCarousel.querySelector('#nextVideo');
+let currentVideoIndex = 0;
+
+function renderCarouselVideo(index) {
+  const video = document.createElement('video');
+  video.src = videoSources[index];
+  video.muted = true;
+  video.loop = true;
+  video.playsInline = true;
+  video.autoplay = true;
+  video.controlsList = 'nodownload nofullscreen noremoteplayback';
+  video.setAttribute('disablePictureInPicture', '');
+  video.controls = true;
+
+  const frame = document.createElement('img');
+  frame.src = 'assets/videoframe.png';
+  frame.alt = 'Video Frame';
+  frame.className = 'video-frame-png';
+
+  carouselContainer.innerHTML = '';
+  carouselContainer.appendChild(video);
+  carouselContainer.appendChild(frame);
+  video.play();
+}
+
+prevBtn.addEventListener('click', () => {
+  currentVideoIndex = (currentVideoIndex - 1 + videoSources.length) % videoSources.length;
+  renderCarouselVideo(currentVideoIndex);
+});
+
+nextBtn.addEventListener('click', () => {
+  currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+  renderCarouselVideo(currentVideoIndex);
+});
+
+function toggleVideoLayout() {
+  if (isMobile()) {
+    videoFeed.style.display = 'none';
+    mobileCarousel.style.display = 'flex';
+    renderCarouselVideo(currentVideoIndex);
+  } else {
+    videoFeed.style.display = 'block';
+    mobileCarousel.style.display = 'none';
+  }
+}
+
+window.addEventListener('DOMContentLoaded', toggleVideoLayout);
+window.addEventListener('resize', toggleVideoLayout);
+
+// Desktop feed generation
 videoSources.forEach((src, index) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('video-wrapper-dynamic');
@@ -68,8 +133,6 @@ videoSources.forEach((src, index) => {
   observer.observe(wrapper);
 
   const videoFrame = wrapper.querySelector('.video-frame-custom');
-
-  // Only show popup on desktop, never on mobile
   videoFrame.addEventListener('click', () => {
     if (window.innerWidth > 600 && !isMobile()) {
       const video = wrapper.querySelector('video').cloneNode(true);

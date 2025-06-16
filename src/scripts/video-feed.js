@@ -66,7 +66,7 @@ function renderCarouselVideo(index) {
   video.autoplay = true;
   video.controlsList = 'nodownload nofullscreen noremoteplayback';
   video.setAttribute('disablePictureInPicture', '');
-  video.controls = false;
+  video.controls = true;
 
   const frame = document.createElement('img');
   frame.src = 'assets/videoframe.png';

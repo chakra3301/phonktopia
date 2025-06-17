@@ -76,6 +76,44 @@
             transform: translateX(-100%);
         }
     }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+    }
+
+    .video-frame {
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    .video-feed, .phone-video-feed {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .phone-video-feed {
+        display: none;
+    }
+
+    @media (max-width: 480px) {
+        .video-feed {
+            display: none;
+        }
+        .phone-video-feed {
+            display: block;
+        }
+    }
   </style>
 </head>
 
@@ -116,8 +154,14 @@
     <img src="assets/cars2.png" alt="Cars" class="cars-image" />
   </div>
 
-  <!-- Video Feed -->
-  <div id="video-feed" class="video-feed-container"></div>
+  <!-- Video Container -->
+  <div class="video-container">
+    <img src="assets/videoframe.png" alt="Video Frame" class="video-frame">
+    <video id="webcam" autoplay playsinline class="video-feed"></video>
+    <video id="phone-video" autoplay loop muted playsinline class="phone-video-feed">
+      <source src="assets/phonev.mp4" type="video/mp4">
+    </video>
+  </div>
 
   <!-- Mobile Carousel -->
 <div id="mobile-video-carousel" style="display: none;">

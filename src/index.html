@@ -61,26 +61,27 @@
         color: #ff00ff;
         font-size: 24px;
         font-weight: bold;
-        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+        text-shadow: 0 0 10px #ff00ff,
+                     0 0 20px #ff00ff,
+                     0 0 30px #ff00ff,
+                     0 0 40px #ff00ff;
         animation: moveText 20s linear infinite;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .banner-text:hover {
-        text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff, 0 0 45px #ff00ff;
     }
 
     @keyframes moveText {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(100%); }
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
     }
   </style>
 </head>
 
 <body>
   <div class="banner">
-    <a href="https://dexscreener.com/solana/45jupg6uluvbc2kjqxcqrskgvvfxwfpguxeqxvdqttqw" target="_blank" class="banner-text">CA : 8ccT17X471pA9innAyh4oMFcajWhJgKxBuvb62jXpump</a>
+    <div class="banner-text">CA : 8ccT17X471pA9innAyh4oMFcajWhJgKxBuvb62jXpump</div>
   </div>
 
   <!-- Webamp Container -->
@@ -116,14 +117,7 @@
   </div>
 
   <!-- Video Feed -->
-  <div class="video-feed">
-    <img src="assets/videoframe.png" alt="Video Frame" class="video-frame">
-    <div class="video-container">
-      <video id="videoFeed" autoplay loop muted playsinline>
-        <source src="assets/phonev.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
+  <div id="video-feed" class="video-feed-container"></div>
 
   <!-- Mobile Carousel -->
 <div id="mobile-video-carousel" style="display: none;">

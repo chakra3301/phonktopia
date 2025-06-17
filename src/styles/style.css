@@ -364,19 +364,15 @@ button:hover {
   border-radius: 12px;
 }
 
-.sticker-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: -50px;  /* Space after buttons */
-  z-index: 2;
+.stick-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 
-.sticker-image {
-  width: 110vw;
-  max-width: 1200px;
-  height: auto;
-  filter: drop-shadow(0 0 10px #a020f0);
+.stick-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
 }
